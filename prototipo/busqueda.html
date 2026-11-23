@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Búsqueda de usuarios — OsintKit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__inner">
+      <a class="marca" href="dashboard.html">OsintKit</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="auditoria.html">Auditoría</a>
+        <a href="metadatos.html">Metadatos</a>
+        <a href="historial.html">Historial</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+    <section class="seccion">
+      <h1>Búsqueda de nicknames y correos</h1>
+      <form class="formulario" action="busqueda.html" method="get">
+        <div class="campo">
+          <label for="objetivo">Alias / username / correo</label>
+          <input type="text" id="objetivo" name="objetivo" required>
+        </div>
+        <fieldset class="campo">
+          <legend>Fuentes</legend>
+          <label><input type="checkbox" name="fuente" value="web"> Web</label>
+          <label><input type="checkbox" name="fuente" value="social"> Redes sociales</label>
+          <label><input type="checkbox" name="fuente" value="foros"> Foros</label>
+        </fieldset>
+        <div class="boton-grupo">
+          <button type="submit" class="boton">Buscar</button>
+        </div>
+      </form>
+      <p class="cargando">Consultando fuentes</p>
+    </section>
+
+    <section class="seccion">
+      <h2>Resultados</h2>
+      <article class="tarjeta">
+        <h3>resultado_ficticio_1</h3>
+        <p>Fuente: Red social X</p>
+        <span class="badge">Confirmado</span>
+      </article>
+      <article class="tarjeta">
+        <h3>resultado_ficticio_2</h3>
+        <p>Fuente: Foro Y</p>
+        <span class="badge">Probable</span>
+      </article>
+      <article class="tarjeta">
+        <h3>resultado_ficticio_3</h3>
+        <p>Fuente: Web Z</p>
+        <span class="badge">Filtrado</span>
+      </article>
+      <div class="boton-grupo">
+        <a class="boton" href="resultados-busqueda.html">Ver resultados</a>
+        <a class="boton" href="reportes.html">Generar reporte</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor"><small>OsintKit — prototipo baja fidelidad</small></div>
+  </footer>
+</body>
+</html>
