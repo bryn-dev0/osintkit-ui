@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil — OsintKit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__inner">
+      <a class="marca" href="dashboard.html">OsintKit</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="auditoria.html">Auditoría</a>
+        <a href="metadatos.html">Metadatos</a>
+        <a href="historial.html">Historial</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+    <section class="seccion">
+      <h1>Perfil del analista</h1>
+      <table class="tabla">
+        <tbody>
+          <tr><th>Nombre</th><td>Analista Ficticio</td></tr>
+          <tr><th>Correo</th><td>analista@ficticio.com</td></tr>
+          <tr><th>Rol</th><td>Auditor</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="seccion">
+      <h2>Cambiar contraseña</h2>
+      <form class="formulario" action="perfil.html" method="post">
+        <div class="campo">
+          <label for="actual">Contraseña actual</label>
+          <input type="password" id="actual" name="actual" required>
+        </div>
+        <div class="campo">
+          <label for="nueva">Nueva contraseña</label>
+          <input type="password" id="nueva" name="nueva" required>
+        </div>
+        <div class="campo">
+          <label for="confirmar">Confirmar nueva contraseña</label>
+          <input type="password" id="confirmar" name="confirmar" required>
+        </div>
+        <div class="alerta">El cambio de contraseña se confirmará al guardar.</div>
+        <div class="boton-grupo">
+          <button type="submit" class="boton">Guardar cambios</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor"><small>OsintKit — prototipo baja fidelidad</small></div>
+  </footer>
+</body>
+</html>
