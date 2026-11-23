@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditoría de dominios — OsintKit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__inner">
+      <a class="marca" href="dashboard.html">OsintKit</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="auditoria.html">Auditoría</a>
+        <a href="metadatos.html">Metadatos</a>
+        <a href="historial.html">Historial</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+    <section class="seccion">
+      <h1>Auditoría de dominio o IP</h1>
+      <form class="formulario" action="auditoria.html" method="get">
+        <div class="campo">
+          <label for="objetivo">Dominio o dirección IP</label>
+          <input type="text" id="objetivo" name="objetivo" required>
+        </div>
+        <div class="alerta">Ingrese un dominio (ejemplo.com) o una IP válida.</div>
+        <div class="boton-grupo">
+          <button type="submit" class="boton">Consultar</button>
+        </div>
+      </form>
+      <p class="cargando">Consultando WHOIS, DNS y geolocalización…</p>
+    </section>
+
+    <section class="seccion">
+      <h2>WHOIS</h2>
+      <table class="tabla">
+        <tbody>
+          <tr><th>Registrante</th><td>ejemplo ficticio</td></tr>
+          <tr><th>Fecha de creación</th><td>2020-01-01</td></tr>
+          <tr><th>Expiración</th><td>2027-01-01</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="seccion">
+      <h2>DNS</h2>
+      <table class="tabla">
+        <tbody>
+          <tr><th>Tipo</th><td>A</td></tr>
+          <tr><th>Valor</th><td>192.0.2.1</td></tr>
+          <tr><th>TTL</th><td>300</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="seccion">
+      <h2>Geolocalización</h2>
+      <table class="tabla">
+        <tbody>
+          <tr><th>País</th><td>Ficticia</td></tr>
+          <tr><th>Ciudad</th><td>Ejemplo</td></tr>
+          <tr><th>Lat/Long</th><td>0.0000, 0.0000</td></tr>
+        </tbody>
+      </table>
+      <div class="boton-grupo">
+        <button type="button" class="boton">Guardar resultados</button>
+        <a class="boton boton-secundario" href="reportes.html">Generar reporte</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor"><small>OsintKit — prototipo baja fidelidad</small></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generación de reportes — OsintKit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__inner">
+      <a class="marca" href="dashboard.html">OsintKit</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="auditoria.html">Auditoría</a>
+        <a href="metadatos.html">Metadatos</a>
+        <a href="historial.html">Historial</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+    <section class="seccion">
+      <h1>Generación de reportes</h1>
+      <div class="alerta">Solo disponible si hay resultados previos.</div>
+      <form class="formulario" action="reportes.html" method="get">
+        <div class="campo">
+          <label for="formato">Formato</label>
+          <select id="formato" name="formato">
+            <option value="pdf">PDF</option>
+            <option value="json">JSON</option>
+          </select>
+        </div>
+        <div class="boton-grupo">
+          <button type="submit" class="boton">Generar reporte</button>
+        </div>
+      </form>
+      <p>El reporte incluye marca del sistema, fecha y analista.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor"><small>OsintKit — prototipo baja fidelidad</small></div>
+  </footer>
+</body>
+</html>

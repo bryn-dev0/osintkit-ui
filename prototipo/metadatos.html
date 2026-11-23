@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extracción de metadatos — OsintKit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__inner">
+      <a class="marca" href="dashboard.html">OsintKit</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="auditoria.html">Auditoría</a>
+        <a href="metadatos.html">Metadatos</a>
+        <a href="historial.html">Historial</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+    <section class="seccion">
+      <h1>Extracción de metadatos</h1>
+      <form class="formulario" action="metadatos.html" method="post" enctype="multipart/form-data">
+        <div class="campo">
+          <label for="archivo">Archivo (imagen o PDF)</label>
+          <input type="file" id="archivo" name="archivo" accept="image/*,application/pdf" required>
+        </div>
+        <div class="alerta">Seleccione una imagen o un PDF dentro del tamaño permitido.</div>
+        <div class="boton-grupo">
+          <button type="submit" class="boton">Extraer</button>
+        </div>
+      </form>
+      <p class="cargando">Extrayendo metadatos…</p>
+    </section>
+
+    <section class="seccion">
+      <h2>Metadatos extraídos</h2>
+      <table class="tabla">
+        <thead>
+          <tr><th>Campo</th><th>Valor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nombre de archivo</td><td>ejemplo_ficticio.jpg</td></tr>
+          <tr><td>Tamaño</td><td>1.2 MB</td></tr>
+          <tr><td>Dimensiones</td><td>1920x1080</td></tr>
+          <tr><td>Cámara</td><td>FicticiaCam X1</td></tr>
+          <tr><td>Fecha de captura</td><td>2026-01-01</td></tr>
+        </tbody>
+      </table>
+      <div class="boton-grupo">
+        <button type="button" class="boton boton-secundario">Limpiar metadatos</button>
+        <button type="button" class="boton boton-secundario">Generar copia segura</button>
+        <a class="boton" href="reportes.html">Generar reporte</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor"><small>OsintKit — prototipo baja fidelidad</small></div>
+  </footer>
+</body>
+</html>

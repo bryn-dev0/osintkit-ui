@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de consultas — OsintKit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor encabezado__inner">
+      <a class="marca" href="dashboard.html">OsintKit</a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="busqueda.html">Búsqueda</a>
+        <a href="auditoria.html">Auditoría</a>
+        <a href="metadatos.html">Metadatos</a>
+        <a href="historial.html">Historial</a>
+        <a href="reportes.html">Reportes</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="login.html">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+    <section class="seccion">
+      <h1>Historial de consultas</h1>
+      <form class="formulario" action="historial.html" method="get">
+        <div class="campo">
+          <label for="filtro">Filtrar por tipo</label>
+          <select id="filtro" name="filtro">
+            <option value="">Todos</option>
+            <option value="usuario">Usuario</option>
+            <option value="dominio">Dominio</option>
+            <option value="metadatos">Metadatos</option>
+          </select>
+        </div>
+        <div class="boton-grupo">
+          <button type="submit" class="boton">Filtrar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="seccion">
+      <table class="tabla">
+        <thead>
+          <tr><th>Fecha</th><th>Tipo</th><th>Objetivo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2026-10-01</td><td>Usuario</td><td>alias_ficticio</td></tr>
+          <tr><td>2026-10-05</td><td>Dominio</td><td>ejemplo.com</td></tr>
+          <tr><td>2026-10-10</td><td>Metadatos</td><td>imagen_ficticia.jpg</td></tr>
+        </tbody>
+      </table>
+      <p class="alerta">Solo se muestran los registros del analista autenticado.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor"><small>OsintKit — prototipo baja fidelidad</small></div>
+  </footer>
+</body>
+</html>
